@@ -1,0 +1,106 @@
+/* ───── ByteShifter ───── */
+/* Crafted with 💻 & ☕ */
+/* github.com/YourGitHubUsername */
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.container {
+    width: 400px;
+    margin: 50px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: darkblue;
+}
+
+#wordDisplay {
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+.hangman {
+    font-size: 18px;
+    font-family: monospace;
+    white-space: pre;
+    text-align: left;
+    margin: 10px auto;
+    display: inline-block;
+}
+
+/* 💀 Screen Shake Effect (3 Times) */
+.shake {
+    animation: shake 0.5s ease-in-out 3;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+/* 💀 Skull Background Effect */
+#skullContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+}
+
+.skull {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0;
+    animation: fallSkulls 3s linear forwards;
+}
+
+@keyframes fallSkulls {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(100vh); opacity: 1; }
+}
+/* 🎉 Confetti Effect */
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none;
+}
