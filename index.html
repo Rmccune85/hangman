@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="confettiCanvas"></canvas>
+
+    <div class="container">
+        <h1>Hangman Game</h1>
+
+        <div id="player1">
+            <h2>Player 1: Enter a word (3-15 letters)</h2>
+            <input type="text" id="wordInput" minlength="3" maxlength="15" placeholder="Enter word">
+            <button id="setWord">Start Game</button>
+            <p id="wordError" style="color:red; display:none;">Invalid word! Enter a real word.</p>
+        </div>
+
+        <div id="player2" style="display:none;">
+            <h2>Player 2: Guess the word</h2>
+            <p id="wordDisplay">---</p>
+            <input type="text" id="letterInput" maxlength="1" placeholder="Enter letter">
+            <button id="guessLetter">Try Letter</button>
+            <p id="feedback"></p>
+            <p>Incorrect Guesses: <span id="wrongGuesses">0</span>/6</p>
+            <p>Time Left: <span id="timer">10</span> sec</p>
+
+            <div class="hangman">
+                <pre id="hangmanDrawing">
+  -----
+  |   |
+      |
+      |
+      |
+      |
+=========
+                </pre>
+            </div>
+        </div>
+
+        <button id="restart" style="display:none;">Play Again</button>
+        <div id="skullContainer"></div> <!-- Skulls will fill up here -->
+    </div>
+
+    <script src="script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
+
+</body>
+</html>
